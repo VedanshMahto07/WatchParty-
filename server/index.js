@@ -33,13 +33,13 @@ const CATALOG = [
   },
   {
     id: 'movie-2',
-    title: 'Big Buck Bunny (Trailer)',
+    title: 'Big Buck Bunny (Animation)',
     genre: 'Animation / Comedy',
     category: 'Animation',
     year: 2008,
-    duration: '33s',
+    duration: '9m 56s',
     rating: '8.4',
-    url: 'https://media.w3.org/2010/05/bunny/trailer.mp4',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.480p.vp9.webm',
     poster: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
     description: 'A large, lovable rabbit deals with bullying forest creatures in this iconic open-source masterpiece.'
   },
@@ -49,9 +49,9 @@ const CATALOG = [
     genre: 'Fantasy / Adventure',
     category: 'Fantasy',
     year: 2010,
-    duration: '52s',
+    duration: '14m 48s',
     rating: '8.8',
-    url: 'https://media.w3.org/2010/05/sintel/trailer.mp4',
+    url: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/Sintel_movie_4K.webm/Sintel_movie_4K.webm.480p.vp9.webm',
     poster: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
     description: 'A lonely young woman finds a baby dragon, but when it is kidnapped, she embarks on a dangerous journey.'
   },
@@ -66,18 +66,6 @@ const CATALOG = [
     url: 'https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4',
     poster: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=600&auto=format&fit=crop&q=80',
     description: 'Breathtaking surf cinematography shot in 4K across the most exotic oceans on Earth.'
-  },
-  {
-    id: 'movie-5',
-    title: 'Blooming Botanicals',
-    genre: 'Macro / Nature',
-    category: 'Documentary',
-    year: 2024,
-    duration: '10s',
-    rating: '7.9',
-    url: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    poster: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&auto=format&fit=crop&q=80',
-    description: 'High-speed timelapse of vibrant spring flowers blooming in ultra-detail.'
   }
 ];
 
