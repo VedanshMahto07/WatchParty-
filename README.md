@@ -64,16 +64,5 @@ npm run dev
    - Real-time display of Network RTT (ping), p95 propagation time, and playback drift.
    - Reconnection simulator to test failure handling under simulated packet drops.
 
----
 
-## 🎙️ Club Interview Defense / Viva Cheat Sheet
-
-### Q1: "How does the real-time playback synchronization work?"
-> *"We use a server-authoritative hybrid clock model over WebSockets (Socket.IO). When a user presses play, pause, or seeks, the event is timestamped by the server and broadcast to all room participants. The receiving clients calculate network propagation using NTP-style clock reconciliation (`Date.now() + clientClockOffset`). This guarantees synchronization even if user device clocks differ."*
-
-### Q2: "How did you ensure propagation $\le 250\text{ ms}$ and drift $\le 500\text{ ms}$?"
-> *"For propagation latency, Socket.IO runs over persistent TCP WebSockets without HTTP polling overhead, yielding under 25ms on local Wi-Fi. Every action event receives an acknowledgment (`metric:ack`) to compute the exact p95 latency curve. For drift, an interval ticker monitors divergence between local `video.currentTime` and the server's elapsed timestamp. If divergence exceeds 500ms, it executes a micro-seek to align with the host."*
-
-### Q3: "How are late joiners and reconnections handled?"
-> *"When a client connects or reconnects after network loss, the server computes the effective video position (`currentTime + elapsedPlayingTime * playbackRate`) and replicates the full room snapshot (active video, playlist, chat history, poll status) in a single atomic payload."*
 
