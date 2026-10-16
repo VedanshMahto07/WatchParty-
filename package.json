@@ -1,0 +1,13 @@
+{
+  "name": "watchparty-platform",
+  "version": "1.0.0",
+  "description": "Real-time Watch Party Application with Ultra-Low Latency Synchronization",
+  "type": "module",
+  "scripts": {
+    "start": "node run-all.js",
+    "dev": "node run-all.js",
+    "server": "npm --prefix server run start",
+    "client": "npm --prefix client run dev"
+  }
+}
+
